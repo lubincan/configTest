@@ -21,7 +21,7 @@ spring:
       content-type: text/html
     cache: false
   activemq:
-    broker-url: tcp://192.168.10.81:61616
+    broker-url: tcp://192.6
     in-memory: true
     pool:
       enabled: true
@@ -30,9 +30,9 @@ spring:
 
 
   mail:
-    host: smtp.partner.outlook.cn
-    username: one2c@cypresstel.com
-    password: One@C1306
+    host: smtp.partook.cn
+    username: o
+    password: On
     properties:
       mail:
         smtp:
@@ -51,9 +51,9 @@ spring:
     email:
       type: com.alibaba.druid.pool.DruidDataSource
       driverClassName: com.mysql.jdbc.Driver
-      url: jdbc:mysql://192.168.10.82:3306/emailUat?useUnicode=true&characterEncoding=utf8
+      url: jdbc:mysql://192.168.1eUnicode=true&characterEncoding=utf8
       username: uatEmail
-      password: X2Lq0t3HIpwrV2wKfZ3i708rRjmFqBrmkLFD/jYd43TFWn+v6WWg7qJi98w1sHaz+rpW7ru0VBBSuJJYirbD1g==
+      password: X2Lq0t3HIpwrV+rpW7ru0VBBSuJJYirbD1g==
       initialSize: 1
       minIdle: 3
       maxActive: 150
@@ -84,9 +84,9 @@ spring:
     sdn:
       type: com.alibaba.druid.pool.DruidDataSource
       driverClassName: com.mysql.jdbc.Driver
-      url: jdbc:mysql://192.168.10.82:3306/uatsdn?useUnicode=true&characterEncoding=utf8
+      url: jdbc:mysql://192.168.10.8acterEncoding=utf8
       username: uatsdn
-      password: BVD54jf7lMa5xOY282fp0aWpn82vdlFTOXLU3cqM8yqE5I0SExNcZyTgYeIpBLv0kAM2hn1RjyNNwAYot7pLCA==
+      password: BVD54jf7lMa5xOY282fp0aWpnAM2hn1RjyNNwAYot7pLCA==
       initialSize: 1
       minIdle: 3
       maxActive: 150
