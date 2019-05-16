@@ -21,7 +21,7 @@ spring:
       content-type: text/html
     cache: false
   activemq:
-    broker-url: tcp://54.222.169.96:61616
+    broker-url: tcp://54.222.16
     in-memory: true
     pool:
       enabled: true
@@ -31,8 +31,8 @@ spring:
 
   mail:
     host: smtp.partner.outlook.cn
-    username: one2c@cypresstel.com
-    password: One@C1306
+    username: o
+    password: On
     properties:
       mail:
         smtp:
@@ -51,9 +51,9 @@ spring:
     email:
       type: com.alibaba.druid.pool.DruidDataSource
       driverClassName: com.mysql.jdbc.Driver
-      url: jdbc:mysql://one2c-rdb.cjlz0b2d0bwx.rds.cn-north-1.amazonaws.com.cn:4567/emailPro?useUnicode=true&characterEncoding=utf8
-      username: emailProCYp
-      password: IVuuVYqflqZ0pKpm2k6o/49c5qajA1CmNDxtVkSBbS0ULv7VI5OFXkg13uMV5n+x7/YFl37+N+/T91QMS4tdHQ==
+      url: jdbc:mysql://one2c-rdb.cjlz0b2d0bwx.rds.cn-north-1rue&characterEncoding=utf8
+      username: emai
+      password: IVuuVYqflqZv7VI5OFXkg13uMV5n+x7/YFl37+N+/T91QMS4tdHQ==
       initialSize: 1
       minIdle: 3
       maxActive: 150
@@ -84,9 +84,9 @@ spring:
     sdn:
       type: com.alibaba.druid.pool.DruidDataSource
       driverClassName: com.mysql.jdbc.Driver
-      url: jdbc:mysql://one2c-rdb.cjlz0b2d0bwx.rds.cn-north-1.amazonaws.com.cn:4567/one2c_pro?useUnicode=true&characterEncoding=utf8
-      username: cypOne2c
-      password: AJIrpQCXEpVeywCXvjPf6Xen+oaLUcctHaPVinWFUxMHJ9ePLvjnIer37G418sqE8nFvbQvBobpWHKPkxR/Rpg==
+      url: jdbc:mysql://one2c-rdb.cjlz0b2d0c_pro?useUnicode=true&characterEncoding=utf8
+      username: cy
+      password: AJIrpQCXEpVeywCXvjPf6XbQvBobpWHKPkxR/Rpg==
       initialSize: 1
       minIdle: 3
       maxActive: 150
