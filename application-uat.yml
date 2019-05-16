@@ -1,0 +1,122 @@
+server:
+    servlet:
+      context-path: /
+      session: 
+        timeout: 1080000
+    tomcat:
+        max-threads: 1000
+        min-spare-threads: 30
+        uri-encoding: UTF-8
+    port: 9104
+    compression:
+      enabled: true
+      
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/views/
+    suffix: .html
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    cache: false
+  activemq:
+    broker-url: tcp://192.168.10.81:61616
+    in-memory: true
+    pool:
+      enabled: true
+    user:  lucas
+    password: lucas123
+
+
+  mail:
+    host: smtp.partner.outlook.cn
+    username: one2c@cypresstel.com
+    password: One@C1306
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+            required: true
+          socketFactory:
+            fallback: true
+
+    default-encoding: utf-8
+    protocol: smtp
+    port: 587
+    
+    
+  datasource:
+    email:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://192.168.10.82:3306/emailUat?useUnicode=true&characterEncoding=utf8
+      username: uatEmail
+      password: X2Lq0t3HIpwrV2wKfZ3i708rRjmFqBrmkLFD/jYd43TFWn+v6WWg7qJi98w1sHaz+rpW7ru0VBBSuJJYirbD1g==
+      initialSize: 1
+      minIdle: 3
+      maxActive: 150
+      # 配置获取连接等待超时的时间
+      maxWait: 60000
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      timeBetweenEvictionRunsMillis: 60000
+      # 配置一个连接在池中最小生存的时间，单位是毫秒
+      minEvictableIdleTimeMillis: 30000
+      #validationQuery: select 'x'
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      # 打开PSCache，并且指定每个连接上PSCache的大小
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 80
+      # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+      filters: config,stat,wall,log4j,slf4j
+      #filters: config
+      # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+      #connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIeEyBq8DXyZzuwQ4QOlRdsNccraORnQRJijdaE6nCMVq59hvGBzgOQLKQRjzJLjjjti28GK1Sz91/ZiWeG8juECAwEAAQ==
+      # 合并多个DruidDataSource的监控数据
+      #useGlobalDataSourceStat: true
+      removeAbandoned: true
+      removeAbandonedTimeout: 18000
+    sdn:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://192.168.10.82:3306/uatsdn?useUnicode=true&characterEncoding=utf8
+      username: uatsdn
+      password: BVD54jf7lMa5xOY282fp0aWpn82vdlFTOXLU3cqM8yqE5I0SExNcZyTgYeIpBLv0kAM2hn1RjyNNwAYot7pLCA==
+      initialSize: 1
+      minIdle: 3
+      maxActive: 150
+      # 配置获取连接等待超时的时间
+      maxWait: 60000
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      timeBetweenEvictionRunsMillis: 60000
+      # 配置一个连接在池中最小生存的时间，单位是毫秒
+      minEvictableIdleTimeMillis: 30000
+      #validationQuery: select 'x'
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      # 打开PSCache，并且指定每个连接上PSCache的大小
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 80
+      # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+      filters: config,stat,wall,log4j,slf4j
+      #filters: config
+      # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+      #connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJSjXnGnaLTbJ/pvNhbEfjAXM9qxKcEnLd+nMl1LkMZlHP5mp+npWPbJYzUoBtrhv2CqgHw76OWnMsZ5tsjowI0CAwEAAQ==
+      # 合并多个DruidDataSource的监控数据
+      #useGlobalDataSourceStat: true
+      removeAbandoned: true
+      removeAbandonedTimeout: 18000
+
+email-system-config: 
+    email-channel: MSG_CHANNEL_EMAIL_SERVER_UAT
+
+logging:
+  config: classpath:logback-spring.xml
